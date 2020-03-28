@@ -23,7 +23,7 @@ namespace aspnet_secrets.Controllers
 
         public async Task<IActionResult> Index()
         {
-            _context.Users.Add(new Models.User { Name = "Misha" });
+            _context.Users.Add(new Models.User { Name = "Pavel" });
             await _context.SaveChangesAsync();
             return View();
         }
