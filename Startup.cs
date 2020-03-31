@@ -27,9 +27,7 @@ namespace aspnet_secrets
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<Aspnet_SecretsDBContext>(options=>options.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;" +
-                                                                                          "Initial Catalog=Aspnet_SecretsDB;" +
-                                                                                          "User ID=Secrets_App;Password=PasswordSecret"));
+            services.AddDbContext<Aspnet_SecretsDBContext>(options=>options.UseSqlServer(Configuration["Secrets_AppDB"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
